@@ -1,7 +1,8 @@
 package com.example.amazons3.service;
 
+import com.example.amazons3.dto.File;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface AmazonService {
-  String uploadFile(MultipartFile file);
+  File uploadFile(MultipartFile file);
 }

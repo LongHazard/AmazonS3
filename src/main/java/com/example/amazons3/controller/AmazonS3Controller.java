@@ -1,5 +1,6 @@
 package com.example.amazons3.controller;
 
+import com.example.amazons3.dto.File;
 import com.example.amazons3.service.AmazonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +17,7 @@ public class AmazonS3Controller {
   private AmazonService amazonS3Service;
 
   @PostMapping("/upload")
-  public ResponseEntity<String> uploadToS3(@RequestParam("file") MultipartFile file) {
-    String url = amazonS3Service.uploadFile(file);
-    return ResponseEntity.ok(url);
+  public ResponseEntity<File> uploadToS3(@RequestParam("file") MultipartFile file) {
+    return ResponseEntity.ok().body(amazonS3Service.uploadFile(file));
   }
 }
