@@ -19,5 +19,5 @@ public class Image {
   private String name;
   private String bucketName;
   private String type;
-  private boolean isDeleted;
+
 }
