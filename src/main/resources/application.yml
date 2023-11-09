@@ -11,8 +11,7 @@ spring:
       ddl-auto: update
 
 aws:
-  accessKeyId: AKIAZZNNGTXCPVGPPHXH
-  secretKey: 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
+  accessKeyId: ${ACCESS_KEY}
+  secretKey: ${SECRET_KEY}
   s3:
     bucketName: shopsport
-  region: ap-southeast-2
